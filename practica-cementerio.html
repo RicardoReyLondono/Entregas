@@ -27,10 +27,12 @@
                 container: 'map',
                 style: 'mapbox://styles/ricardoreylondono/cl06yscqs000x16oe5nepaz4g',
                 center: [2.837, 41.972],
-                zoom: 15,
-                attributionControl: false
+                zoom: 16,
+                attributionControl: false,
+                hash: true
             });
-
+            map.addControl(new mapboxgl.AttributionControl({compact: true}));
+            map.addControl(new mapboxgl.NavigationControl());
         }
     </script>
 </head>
