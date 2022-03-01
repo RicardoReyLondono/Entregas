@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta charset='utf-8' />
     <title>Practica Cementerio Ricardo Rey</title>
@@ -10,6 +11,7 @@
             margin: 0;
             padding: 0;
         }
+
         #map {
             position: absolute;
             top: 0;
@@ -31,7 +33,7 @@
                 attributionControl: false,
                 hash: true
             });
-            map.addControl(new mapboxgl.AttributionControl({compact: true}));
+            map.addControl(new mapboxgl.AttributionControl({ compact: true }));
             map.addControl(new mapboxgl.NavigationControl());
 
             map.on('load', function () {
@@ -45,11 +47,33 @@
                     type: "point",
                     source: "constru_cementerio",
                     'source-layer': "constru_cementerio-048q9r", //poner vuestro titulo capa
-                    paint:{
-                        'line-color':"#00ff00",
-                        "line-width":3
+                    paint: {
+                        'line-color': "#00ff00",
+                        "line-width": 3
                     }
                 });
+            });
+            map.on('click', 'constru_cementerio', function (e) {
+
+                var text = "";
+                //console.info(e);
+                for (key in e.features[0].properties) {
+
+                    text += "<b>" + key + "</b>:" + e.features[0].properties[key] + "<br>";
+                }
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(text)
+                    .addTo(map);
+
+            });
+
+            map.on('mouseenter', 'constru_cementerio', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+
+            map.on('mouseleave', 'constru_cementerio', function () {
+                map.getCanvas().style.cursor = '';
             });
         }
     </script>
@@ -59,4 +83,4 @@
     <div id="map"></div>
 </body>
 
-</html>  
+</html>
