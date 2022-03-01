@@ -33,6 +33,24 @@
             });
             map.addControl(new mapboxgl.AttributionControl({compact: true}));
             map.addControl(new mapboxgl.NavigationControl());
+
+            map.on('load', function () {
+                map.addSource("constru_cementerio", {
+                    type: "vector",
+                    url: "mapbox://ricardoreylondono.b265s778" //poner mapbox://vuestro id
+                }); //fin map source
+
+                map.addLayer({
+                    id: "constru_cementerio",
+                    type: "point",
+                    source: "constru_cementerio",
+                    'source-layer': "constru_cementerio-048q9r", //poner vuestro titulo capa
+                    paint:{
+                        'line-color':"#00ff00",
+                        "line-width":3
+                    }
+                });
+            });
         }
     </script>
 </head>
