@@ -15,7 +15,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Caribe Colombiano',
-            description: 'También conocido como Eyjafjöll,2​ o Eyjafjalla,3​ es un volcán situado al norte de Skógar, en la región de Suðurland, al sur de Islandia.4​ Tiene entre 1651 m y 1666 m de altitud,​ y ha estado moderadamente activo en los últimos 8000 años.',
+            description: 'El <strong>Caribe Colombiano</strong> es una región única que se caracteriza por la enorme diversidad de corales y peces que tiene. En este Storymap mostráremos los mejores lugares para bucear en <strong>Santa Marta</strong>, <strong>Islas del Rosario</strong>, <strong>Capurgana</strong>, y el <strong>Archipielago de San Andrés y Providencia</strong>.',
             location: {
                 center: [-76.52831, 11.73099],
                 zoom: 5.5,
