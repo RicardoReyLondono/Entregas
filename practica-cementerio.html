@@ -53,28 +53,7 @@
                     }
                 });
             });
-            map.on('click', 'constru_cementerio', function (e) {
-
-                var text = "";
-                //console.info(e);
-                for (key in e.features[0].properties) {
-
-                    text += "<b>" + key + "</b>:" + e.features[0].properties[key] + "<br>";
-                }
-                new mapboxgl.Popup()
-                    .setLngLat(e.lngLat)
-                    .setHTML(text)
-                    .addTo(map);
-
-            });
-
-            map.on('mouseenter', 'constru_cementerio', function () {
-                map.getCanvas().style.cursor = 'pointer';
-            });
-
-            map.on('mouseleave', 'constru_cementerio', function () {
-                map.getCanvas().style.cursor = '';
-            });
+            
         }
     </script>
 </head>
