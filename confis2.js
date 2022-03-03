@@ -15,11 +15,11 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Caribe Colombiano',
-            description: 'También conocido como Eyjafjöll,2​ o Eyjafjalla,3​ es un volcán situado al norte de Skógar, en la región de Suðurland, al sur de Islandia.4​ Tiene entre 1651 m y 1666 m de altitud,​ y ha estado moderadamente activo en los últimos 8000 años.',
+            description: 'El <strong>Caribe Colombiano</strong> es una región única que se caracteriza por la enorme diversidad de corales y peces que tiene. En este Storymap mostráremos los mejores lugares para bucear en <strong>Santa Marta</strong>, <strong>Islas del Rosario</strong>, <strong>Capurgana</strong>, y el <strong>Archipielago de San Andrés y Providencia</strong>.',
             location: {
                 center: [-76.52831, 11.73099],
                 zoom: 5.5,
-                pitch: 20,
+                pitch: 5,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
@@ -58,18 +58,18 @@ var config = {
         },{
             id: 'SitioBuceo3',
             alignment: 'left',
+            showMarkers: true,
             hidden: false,
-            title: 'Islas del Rosario, Cartagena',
+            title: 'Oceano Scuba',
             image: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Cr%C3%A1ter_del_Vesubio.jpg',
             description: 'Es un volcán activo del tipo vesubiano situado frente a la bahía de Nápoles y a unos nueve kilómetros de distancia de la ciudad de Nápoles. Se encuentra en la ciudad metropolitana de Nápoles, perteneciente a la región italiana de la Campania. Tiene una altura máxima de 1281 m s. n. m. y se alza al sur de la cadena principal de los Apeninos.',
             location: {
-                center: [-75.78386, 10.16181],
+                center: [-74.19018, 11.26628],
                 zoom: 13.5,
-                pitch: 60,
+                pitch: 20,
                 bearing: -43.2
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []

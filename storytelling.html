@@ -16,7 +16,11 @@
             font-family: Georgia;
         }
         
-        strong { font-family: Georgia; color: rgb(107, 250, 202);}
+        strong { font-family: Georgia; color: rgb(243, 197, 128);}
+        a {font-weight: bold; font-family: Georgia}
+        h1 {font-size: 26px; font-family: Georgia; color: rgb(54, 243, 180); text-align: center;}
+        h2 {font-size: 18px; font-weight: normal; font-family: Georgia; color: rgb(238, 245, 243);line-height: 25px;}
+        h3{ font-family: Georgia; color: rgb(54, 243, 180);text-align: center;}
 
         a, a:hover, a:visited {
             color: #0071bc;
@@ -36,7 +40,7 @@
         #header h1, #header h2, #header p {
             margin: 0;
             padding: 2vh 2vw;
-            text-align: left;
+            text-align: center;
         }
         #footer {
             width: 100%;
@@ -118,6 +122,7 @@
 <div id="map"></div>
 <div id="map"></div>
 <div id="story"></div>
+<div id="SitioBuceo1"></div>
 <script src="./config.js"></script>
 <script>
 var layerTypes = {
@@ -204,6 +209,21 @@ config.chapters.forEach((record, idx) => {
     if (record.description) {
         var story = document.createElement('p');
         story.innerHTML = record.description;
+        chapter.appendChild(story);
+    }
+    if (record.text) {
+        var story = document.createElement('p');
+        story.innerHTML = record.text;
+        chapter.appendChild(story);
+    }
+    if (record.text2) {
+        var story = document.createElement('p');
+        story.innerHTML = record.text2;
+        chapter.appendChild(story);
+    }
+    if (record.text3) {
+        var story = document.createElement('p');
+        story.innerHTML = record.text3;
         chapter.appendChild(story);
     }
 
@@ -313,8 +333,8 @@ map.on("load", function() {
         if (chapter.rotateAnimation) {
             map.once('moveend', function() {
                 const rotateNumber = map.getBearing();
-                map.rotateTo(rotateNumber + 90, {
-                    duration: 24000, easing: function (t) {
+                map.rotateTo(rotateNumber + 30, {
+                    duration: 10000, easing: function (t) {
                         return t;
                     }
                 });
