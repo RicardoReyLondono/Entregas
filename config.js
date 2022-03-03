@@ -5,7 +5,7 @@ var config = {
     markerColor: '#3FB1CE',
     theme: 'dark',
     use3dTerrain: true,
-    byline: '',
+    byline: 'Elaborado por Ricardo Rey Londoño',
     title: 'Guía de Buceo en Colombia',
     subtitle: 'Colombia es un país nutrido por el Mar Caribe en el norte y el Oceáno Pacífico en el occidente. Esta posición geografíca, le permite tener un gran diversidad de peces, maniferos marinos y corales única en Sur América. En este Storymap exploraremos los mejores lugares para bucear en el Caribe y Pacífico.',
     footer: 'Source: <a href="https://travel.padi.com/">Padi Travel</a>',
